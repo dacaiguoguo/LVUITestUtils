@@ -75,11 +75,11 @@ NSString * const uiTestServerAddress = @"http://localhost:5000";
 }
 
 - (void)setOrientation:(UIInterfaceOrientation)orientation {
-    [self callGetRemoteEndpoint:@"setOrientation" args:@[@(orientation)]];
+    [self callGetRemoteEndpoint:@"setOrientation" args:@[@(orientation).description]];
 }
 
 - (NSURLSession *)session {
-    if (_session) {
+    if (!_session) {
         self.session = [NSURLSession sessionWithConfiguration:NSURLSessionConfiguration.ephemeralSessionConfiguration];
     }
     return _session;
@@ -107,7 +107,7 @@ NSString * const uiTestServerAddress = @"http://localhost:5000";
     request.HTTPMethod = method;
     __block NSData *result;
     XCTestExpectation *expectation = [self expectationWithDescription:@"result"];
-    NSURLSessionDataTask *task = [[self session] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    self.taskGet = [[self session] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error) {
             XCTFail("dataTaskWithRequest error (please check if UITestServer is running): %@",error);
             return;
@@ -125,7 +125,7 @@ NSString * const uiTestServerAddress = @"http://localhost:5000";
         result = data;
         [expectation fulfill];
     }];
-    [task resume];
+    [self.taskGet resume];
     [self waitForExpectationsWithTimeout:10 handler:nil];
     return result;
 }

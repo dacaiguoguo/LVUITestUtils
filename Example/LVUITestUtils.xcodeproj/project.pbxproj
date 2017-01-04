@@ -14,7 +14,6 @@
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* LVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* LVAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* LVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* LVViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -22,6 +21,8 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		9D0D93E71E1CC36400F6024B /* LVFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0D93E61E1CC36400F6024B /* LVFirstViewController.m */; };
+		9D0D93EA1E1CC38900F6024B /* LVSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D0D93E91E1CC38900F6024B /* LVSecondViewController.m */; };
 		9DD6B0541E1C926500769013 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DD6B0531E1C926500769013 /* LaunchScreen.storyboard */; };
 		9DD73CEE1E1BABC2001476EF /* LVUITestUtils_ExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD73CED1E1BABC2001476EF /* LVUITestUtils_ExampleUITests.m */; };
 		E5971BDA0C96B789D444BBC3 /* Pods_LVUITestUtils_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8840C1F307C89F59CC80CB /* Pods_LVUITestUtils_Example.framework */; };
@@ -56,8 +57,6 @@
 		6003F59B195388D20070C39A /* LVUITestUtils-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LVUITestUtils-Prefix.pch"; sourceTree = "<group>"; };
 		6003F59C195388D20070C39A /* LVAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LVAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* LVAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LVAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* LVViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LVViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* LVViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LVViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* LVUITestUtils_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LVUITestUtils_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -71,6 +70,10 @@
 		8BD3476E7E9F025B9E25D43F /* Pods-LVUITestUtils_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LVUITestUtils_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LVUITestUtils_Example/Pods-LVUITestUtils_Example.release.xcconfig"; sourceTree = "<group>"; };
 		9934DE6F1BD739E0DE7E905C /* Pods-LVUITestUtils_ExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LVUITestUtils_ExampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LVUITestUtils_ExampleUITests/Pods-LVUITestUtils_ExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9D0D93DF1E1CC1C400F6024B /* LVUITestUtilsServer.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LVUITestUtilsServer.podspec; path = ../LVUITestUtilsServer.podspec; sourceTree = "<group>"; };
+		9D0D93E51E1CC36400F6024B /* LVFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LVFirstViewController.h; sourceTree = "<group>"; };
+		9D0D93E61E1CC36400F6024B /* LVFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LVFirstViewController.m; sourceTree = "<group>"; };
+		9D0D93E81E1CC38900F6024B /* LVSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LVSecondViewController.h; sourceTree = "<group>"; };
+		9D0D93E91E1CC38900F6024B /* LVSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LVSecondViewController.m; sourceTree = "<group>"; };
 		9DD6B0531E1C926500769013 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DD73CEB1E1BABC2001476EF /* LVUITestUtils_ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LVUITestUtils_ExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD73CED1E1BABC2001476EF /* LVUITestUtils_ExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LVUITestUtils_ExampleUITests.m; sourceTree = "<group>"; };
@@ -155,13 +158,15 @@
 		6003F593195388D20070C39A /* Example for LVUITestUtils */ = {
 			isa = PBXGroup;
 			children = (
+				6003F5A8195388D20070C39A /* Images.xcassets */,
+				9DD6B0531E1C926500769013 /* LaunchScreen.storyboard */,
 				6003F59C195388D20070C39A /* LVAppDelegate.h */,
 				6003F59D195388D20070C39A /* LVAppDelegate.m */,
+				9D0D93E51E1CC36400F6024B /* LVFirstViewController.h */,
+				9D0D93E61E1CC36400F6024B /* LVFirstViewController.m */,
+				9D0D93E81E1CC38900F6024B /* LVSecondViewController.h */,
+				9D0D93E91E1CC38900F6024B /* LVSecondViewController.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				9DD6B0531E1C926500769013 /* LaunchScreen.storyboard */,
-				6003F5A5195388D20070C39A /* LVViewController.h */,
-				6003F5A6195388D20070C39A /* LVViewController.m */,
-				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
 			name = "Example for LVUITestUtils";
@@ -467,8 +472,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* LVAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* LVViewController.m in Sources */,
+				9D0D93EA1E1CC38900F6024B /* LVSecondViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				9D0D93E71E1CC36400F6024B /* LVFirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

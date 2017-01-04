@@ -94,7 +94,8 @@ open class LVUITestServer:NSObject  {
         }
         
         server["/setOrientation/:orientation"] = { request in
-            if let orientationString = request.params["orientation"] {
+            let (_, value) = request.params.first!
+            if let orientationString = Int32(value) {
                 let orientation = Int(orientationString)
                 DispatchQueue.main.async {
                     PrivateUtils.forceOrientation(Int32(orientation ?? UIInterfaceOrientation.portrait.rawValue))
@@ -104,12 +105,6 @@ open class LVUITestServer:NSObject  {
         }
         
         print("Starting UI Test server on port \(port)")
-        do {
-            try server.start(port)
-        } catch {
-            print("Failed to start the server")
-        }
-        
         do {
             try server.start(port)
         } catch {

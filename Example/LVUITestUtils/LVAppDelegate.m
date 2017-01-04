@@ -17,15 +17,19 @@
     // Override point for customization after application launch.
     LVUITestServer *server = [LVUITestServer sharedInstance];
     [server listen:5000];
+    
     NSURLSession *session = [NSURLSession sessionWithConfiguration:NSURLSessionConfiguration.ephemeralSessionConfiguration];
-    NSMutableURLRequest *mutRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:5000/screenshot.png"]];
+    NSMutableURLRequest *mutRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:5000/files/4"]];
     mutRequest.HTTPMethod = @"GET";
     NSURLSessionDataTask *task = [session dataTaskWithRequest:mutRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         UIImage *image = [UIImage imageWithData:data];
-        NSLog(@"%@",image);
+        NSLog(@"%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
     }];
     [task resume];
-    
+    /*
+
+
+    */
     return YES;
 }
 

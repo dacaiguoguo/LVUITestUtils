@@ -1,22 +1,15 @@
 //
-//  LVViewController.m
+//  LVFirstViewController.m
 //  LVUITestUtils
 //
-//  Created by dacaiguoguo on 01/03/2017.
-//  Copyright (c) 2017 dacaiguoguo. All rights reserved.
+//  Created by yanguo sun on 04/01/2017.
+//  Copyright © 2017 sunyanguo. All rights reserved.
 //
 
-#import "LVViewController.h"
+#import "LVFirstViewController.h"
 
-@interface LVViewController ()
-@property (strong, nonatomic) IBOutlet UIWebView *mainWebView;
-
-@end
-
-@implementation LVViewController
-
-- (void)viewDidLoad
-{
+@implementation LVFirstViewController
+- (void)viewDidLoad {
     [super viewDidLoad];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:NSURLSessionConfiguration.ephemeralSessionConfiguration];
     NSMutableURLRequest *mutRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:5000/login"]];
@@ -26,13 +19,5 @@
         [self.mainWebView loadHTMLString:htmlString baseURL:mutRequest.URL];
     }];
     [task resume];
-	// Do any additional setup after loading the view, typically from a nib.
 }
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 @end
