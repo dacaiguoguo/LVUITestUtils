@@ -17,7 +17,6 @@
 @property (nonatomic) UIInterfaceOrientation orientation;
 @property (nonatomic, weak) XCTestExpectation * _Nullable waitExpectation;
 @property (nonatomic, strong) NSURLSession * _Nonnull session;
-@property (nonatomic, strong) NSURLSessionDataTask *taskGet;
 
 - (nonnull NSString *)realHomeDirectory;
 - (nonnull NSString *)screenResolution;

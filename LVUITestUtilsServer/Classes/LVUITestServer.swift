@@ -98,7 +98,7 @@ open class LVUITestServer:NSObject  {
             if let orientationString = Int32(value) {
                 let orientation = Int(orientationString)
                 DispatchQueue.main.async {
-                    PrivateUtils.forceOrientation(Int32(orientation ?? UIInterfaceOrientation.portrait.rawValue))
+                    PrivateUtils.forceOrientation(Int32(orientation ))
                 }
             }
             return .raw(200, "OK", nil,{ try $0.write([UInt8]()) })

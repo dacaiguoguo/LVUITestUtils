@@ -107,14 +107,14 @@ NSString * const uiTestServerAddress = @"http://localhost:5000";
     request.HTTPMethod = method;
     __block NSData *result;
     XCTestExpectation *expectation = [self expectationWithDescription:@"result"];
-    self.taskGet = [[self session] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    NSURLSessionDataTask *task = [[self session] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error) {
             XCTFail("dataTaskWithRequest error (please check if UITestServer is running): %@",error);
             return;
         }
         if (response) {
             if ([((NSHTTPURLResponse *)response) statusCode] != 200) {
-                XCTFail("dataTaskWithRequest: status code %d received, please check if UITestServer is running",[((NSHTTPURLResponse *)response) statusCode]);
+                XCTFail("dataTaskWithRequest: status code %ld received, please check if UITestServer is running",(long)[((NSHTTPURLResponse *)response) statusCode]);
                 return;
             }
         }
@@ -125,7 +125,7 @@ NSString * const uiTestServerAddress = @"http://localhost:5000";
         result = data;
         [expectation fulfill];
     }];
-    [self.taskGet resume];
+    [task resume];
     [self waitForExpectationsWithTimeout:10 handler:nil];
     return result;
 }
