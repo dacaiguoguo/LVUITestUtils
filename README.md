@@ -1,5 +1,5 @@
 # LVUITestUtils
-
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CI Status](http://img.shields.io/travis/sunyanguo/LVUITestUtils.svg?style=flat)](https://travis-ci.org/sunyanguo/LVUITestUtils)
 [![Version](https://img.shields.io/cocoapods/v/LVUITestUtils.svg?style=flat)](http://cocoapods.org/pods/LVUITestUtils)
 [![License](https://img.shields.io/cocoapods/l/LVUITestUtils.svg?style=flat)](http://cocoapods.org/pods/LVUITestUtils)
@@ -21,6 +21,7 @@ pod "LVUITestUtils"
 ```
 
 ## LVUITestUtilsServer
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CI Status](http://img.shields.io/travis/sunyanguo/LVUITestUtilsServer.svg?style=flat)](https://travis-ci.org/sunyanguo/LVUITestUtilsServer)
 [![Version](https://img.shields.io/cocoapods/v/LVUITestUtilsServer.svg?style=flat)](http://cocoapods.org/pods/LVUITestUtilsServer)
 [![License](https://img.shields.io/cocoapods/l/LVUITestUtilsServer.svg?style=flat)](http://cocoapods.org/pods/LVUITestUtilsServer)
