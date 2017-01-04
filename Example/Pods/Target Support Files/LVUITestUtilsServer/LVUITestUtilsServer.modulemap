@@ -1,0 +1,6 @@
+framework module LVUITestUtilsServer {
+  umbrella header "LVUITestUtilsServer-umbrella.h"
+
+  export *
+  module * { export * }
+}
