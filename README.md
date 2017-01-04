@@ -22,7 +22,7 @@ pod "LVUITestUtils"
 
 ## Author
 
-sunyanguo, sunyanguo@lvmama.com
+dacaiguoguo, dacaiguoguo@gmail.com
 
 ## License
 
