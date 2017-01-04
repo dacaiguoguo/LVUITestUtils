@@ -1,42 +1,19 @@
-#
-# Be sure to run `pod lib lint LVUITestUtils.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
 
 Pod::Spec.new do |s|
-  s.name             = 'LVUITestUtils'
+  s.name             = 'LVUITestUtilsServer'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of LVUITestUtils.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.summary          = 'Take screenshots in Xcode UI Tests (Swift)'
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+    Take screenshots in Xcode UI Tests (Swift), use Swifter for http server
                        DESC
 
   s.homepage         = 'https://github.com/dacaiguoguo/LVUITestUtils'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'sunyanguo' => 'dacaiguoguo@163.com' }
   s.source           = { :git => 'https://github.com/dacaiguoguo/LVUITestUtils.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'LVUITestUtils/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'LVUITestUtils' => ['LVUITestUtils/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.source_files = 'LVUITestUtilsServer/Classes/**/*'
+  s.dependency 'Swifter'
 end
