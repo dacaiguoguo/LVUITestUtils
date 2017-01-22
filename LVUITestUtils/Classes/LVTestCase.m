@@ -8,6 +8,26 @@
 
 #import <XCTest/XCTest.h>
 #import "LVTestCase.h"
+
+@implementation NSTimer (addBlock)
+
++ (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)interval repeats:(BOOL)repeats blocker:(void (^)(NSTimer *timer))blocker {
+    void (^block)() = [blocker copy];
+    id ret = [self scheduledTimerWithTimeInterval:interval target:self selector:@selector(jdExecuteSimpleBlock:) userInfo:block repeats:repeats];
+    return ret;
+}
+
++(void)jdExecuteSimpleBlock:(NSTimer *)inTimer;
+{
+    if([inTimer userInfo])
+    {
+        void (^block)() = (void (^)())[inTimer userInfo];
+        block();
+    }
+}
+
+@end
+
 @import SimulatorStatusMagic;
 
 NSString * const uiTestServerAddress = @"http://localhost:5000";
@@ -180,7 +200,7 @@ NSString * const uiTestServerAddress = @"http://localhost:5000";
 
 - (void)waitForDuration:(NSTimeInterval)duration {
     self.waitExpectation = [self expectationWithDescription:@"wait"];
-    [NSTimer scheduledTimerWithTimeInterval:duration repeats:NO block:^(NSTimer * _Nonnull timer) {
+    [NSTimer scheduledTimerWithTimeInterval:duration repeats:NO blocker:^(NSTimer * _Nonnull timer) {
         [self.waitExpectation fulfill];
     }];
     [self waitForExpectationsWithTimeout:duration + 3 handler:nil];

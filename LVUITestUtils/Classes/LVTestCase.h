@@ -8,6 +8,10 @@
 
 #import <XCTest/XCTest.h>
 
+@interface NSTimer (addBlock)
++ (NSTimer *)scheduledTimerWithTimeInterval:(NSTimeInterval)interval repeats:(BOOL)repeats blocker:(void (^)(NSTimer *timer))blocker;
+@end
+
 @interface LVTestCase : XCTestCase
 @property (nonatomic, assign) NSTimeInterval waitTimeout;
 @property (nonatomic, readonly, strong) NSString * _Nonnull uiTestServerAddress;
